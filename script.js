@@ -1,6 +1,3 @@
-
-
-
 function getComputerChoice(){
     let computer_choose = Math.floor(Math.random() * 3) + 1; //random generated variable for random outcome
     
@@ -55,14 +52,14 @@ function playRound(playerSelection, computerSelection) {
   }
 
   function game(){
+    for (let i = 0; i < 5; i++) {
+        const computerSelection = getComputerChoice();
+        const playerChoose = prompt("Choose: rock , paper ,scissors");
+        let playerSelection = playerChoose.toLowerCase();      
         console.log(playRound(playerSelection, computerSelection));
-    
+    }
 }
 
-
-  const playerChoose = prompt("Choose: rock , paper ,scissors");
-  let playerSelection = playerChoose.toLowerCase();
-  const computerSelection = getComputerChoice();
 
 
 game();
