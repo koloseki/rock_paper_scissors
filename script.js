@@ -27,7 +27,7 @@ function playRound(playerSelection, computerSelection) {
     const resultName = document.querySelector('#resultName');
     const resultScore = document.querySelector('#resultScore');
 
-
+    
     
 
     if(playerSelection == "rock" && computerSelection == "paper"){
@@ -63,7 +63,25 @@ function playRound(playerSelection, computerSelection) {
     }
     console.log("YOU: "+ pp + " COMPUTER: " + cp);
     resultScore.textContent = "YOU: "+ pp + " COMPUTER: " + cp;
+
+    if(pp == 5){
+        alert("You Win!"); //if player win 5 times, alert will pop up
+        pp = 0;
+        cp = 0;
+    
+        }else if(cp == 5){
+            alert("You Lose!"); //if computer win 5 times, alert will pop up
+            resultName.textContent = '';
+            resultScore.textContent = ''
+            pp = 0;
+            cp = 0;
+        }
+   
+    
   }
+
+  
+
 
   function game(selecttedBtn){
         const computerSelection = getComputerChoice();
