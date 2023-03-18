@@ -26,34 +26,48 @@ function playRound(playerSelection, computerSelection) {
 
     const resultName = document.querySelector('#resultName');
     const resultPlayer = document.querySelector('#resultPlayer');
-    const resultComputer = document.querySelector('#resultComputer');
-
+    const playerIcon = document.querySelector('#playerIcon');
+    const computerIcon = document.querySelector('#computerIcon');
     
     
 
     if(playerSelection == "rock" && computerSelection == "paper"){
         resultName.textContent = 'You lose! Paper Beat Rock';
+        playerIcon.src = `img/${playerSelection}.png`;
+        computerIcon.src = `img/${computerSelection}.png`;
         cp++;
     }else if(playerSelection == "paper" && computerSelection == "rock"){
         resultName.textContent = 'You Win! Paper Beat Rock'; 
+        playerIcon.src = `img/${playerSelection}.png`;
+        computerIcon.src = `img/${computerSelection}.png`;
         pp++;
     }
     else if(playerSelection == "rock" && computerSelection == "scissors"){
         resultName.textContent = 'You Win! Rock Beat Scissors'; 
+        playerIcon.src = `img/${playerSelection}.png`;
+        computerIcon.src = `img/${computerSelection}.png`;
         pp++;
     }else if(playerSelection == "scissors" && computerSelection == "rock"){
         resultName.textContent = 'You lose! Rock Beat Scissors'; 
+        playerIcon.src = `img/${playerSelection}.png`;
+        computerIcon.src = `img/${computerSelection}.png`;
         cp++;
     }
     else if(playerSelection == "paper" && computerSelection == "scissors"){
-        resultName.textContent = 'You lose! Scissors Beat paper'; 
+        resultName.textContent = 'You lose! Scissors Beat paper';
+        playerIcon.src = `img/${playerSelection}.png`;
+        computerIcon.src = `img/${computerSelection}.png`; 
         cp++;
     }else if(playerSelection == "scissors" && computerSelection == "paper"){
         resultName.textContent = 'You Win! Scissors Beat paper'; 
+        playerIcon.src = `img/${playerSelection}.png`;
+        computerIcon.src = `img/${computerSelection}.png`;
         pp++;
     }
     else{
         resultName.textContent = 'Draw';
+        playerIcon.src = `img/${playerSelection}.png`;
+        computerIcon.src = `img/${computerSelection}.png`;
     }
     console.log("YOU: "+ pp + " COMPUTER: " + cp);
     resultPlayer.textContent = " "+ pp ;
@@ -61,15 +75,13 @@ function playRound(playerSelection, computerSelection) {
 
 
 
-    if(pp == 5){
+    if(pp >= 5){
         alert("You Win!"); //if player win 5 times, alert will pop up
         pp = 0;
         cp = 0;
     
-        }else if(cp == 5){
+        }else if(cp >= 5){
             alert("You Lose!"); //if computer win 5 times, alert will pop up
-            resultName.textContent = '';
-            resultScore.textContent = ''
             pp = 0;
             cp = 0;
         }
