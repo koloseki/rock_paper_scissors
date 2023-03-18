@@ -56,8 +56,8 @@ function playRound(playerSelection, computerSelection) {
         resultName.textContent = 'Draw';
     }
     console.log("YOU: "+ pp + " COMPUTER: " + cp);
-    resultPlayer.textContent = "Player: "+ pp ;
-    resultComputer.textContent ="Computer: " + cp;
+    resultPlayer.textContent = " "+ pp ;
+    resultComputer.textContent =" " + cp;
 
 
 

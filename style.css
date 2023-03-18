@@ -24,9 +24,7 @@ main{
     flex: 1 1 15;
     display: flex;
     flex-direction: column;
-    gap: 10vh;
-    padding-top: 0;
-
+    gap: 5vh;
 }
 
 .info{
@@ -35,7 +33,6 @@ main{
     align-items: center;
     border: 1px solid sandybrown;
     font-size: 2rem;
-    padding-top: 0;
 
 }
 
@@ -50,19 +47,37 @@ main{
     gap: 5vw;
 }
 
+
 .playerSide{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    height: auto;
+}
+
+.plaStyleHelper{
+    display: flex;
+    align-items: center;
 }
 
 .computerSide{
     display: flex;
     flex-direction: column;
-    justify-content: center;
-
+    height: auto;
 }
 
+.comStyleHelper{
+    display: flex;
+    align-items: center;
+}
+
+
+#resultComputer{
+    background-color: salmon;
+}
+
+
+
+/*buttons section */
 
 .buttons{
     display: flex;
@@ -73,9 +88,8 @@ main{
 button{
     height: 15vh;
     width: 10vw;
-    background-color: #444;
-    
-    
+    background-color: #444; 
+    border: none;
 }
 
 button:hover{
@@ -89,6 +103,8 @@ button:active{
     transition: 0.1s;
 }
 
+
+/* footer section */
 
 footer{
     flex: 1 1 1;
