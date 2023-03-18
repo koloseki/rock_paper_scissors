@@ -7,13 +7,41 @@
     <title>Document</title>
     <script src="script.js" defer></script>
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" type="image/jpg" href="/img/favicon.ico">
 </head>
 <body>
-    <button id="rock">rock</button>
-    <button id="paper">paper</button>
-    <button id="scissors">scissors</button>
-    <p>Wyniki:</p>
-    <div id="resultName"> </div>
-    <div id="resultScore"></div>
+    <header>
+        <h1>Rock</h1>
+        <h1 style="color: salmon;">Paper</h1>
+        <h1>Scissors</h1>
+    </header>
+
+    <main>
+        <div class="info">
+            <h2 id="resultName">Choose what you play <h3> The one who first score 5 points wins the game </h3></h2>
+            <div class="results">
+                <div class="playerSide">
+                    <img src="/img/questionMArk.png">
+                    <div id="resultPlayer">Player: 0  </div>
+                </div>
+                <div class="computerSide">
+                    <img src="/img/questionMArk.png" height="100%" width="75%">
+                    <div id="resultComputer">Computer: 0 </div> 
+                </div>   
+            </div>
+        </div>
+
+        <div class="buttons">
+            <button id="rock"><img src="/img/rock.png"></button>
+            <button id="paper"><img src="/img/paper.png"></button>
+            <button id="scissors"><img src="/img/scissors.png"></button>
+        </div>
+    </main>
+
+    <footer>
+        Copyright &copy; koloseki <a class="gitLink"href="https://github.com/koloseki"><img class="imgOfGithub" src="/img/icons8-github.svg" height="30vh" width="auto" alt="github"></a>
+    </footer>
+
+
 </body>
 </html>

@@ -25,44 +25,41 @@ let pp = 0, cp = 0;          //declares a variable that counts how many time som
 function playRound(playerSelection, computerSelection) {
 
     const resultName = document.querySelector('#resultName');
-    const resultScore = document.querySelector('#resultScore');
+    const resultPlayer = document.querySelector('#resultPlayer');
+    const resultComputer = document.querySelector('#resultComputer');
 
     
     
 
     if(playerSelection == "rock" && computerSelection == "paper"){
-        console.log("You lose! Paper Beat Rock");
         resultName.textContent = 'You lose! Paper Beat Rock';
         cp++;
     }else if(playerSelection == "paper" && computerSelection == "rock"){
-        console.log("You Win! Paper Beat Rock");
         resultName.textContent = 'You Win! Paper Beat Rock'; 
         pp++;
     }
     else if(playerSelection == "rock" && computerSelection == "scissors"){
-        console.log("You Win! Rock Beat Scissors");
         resultName.textContent = 'You Win! Rock Beat Scissors'; 
         pp++;
     }else if(playerSelection == "scissors" && computerSelection == "rock"){
-        console.log("You lose! Rock Beat Scissors");
         resultName.textContent = 'You lose! Rock Beat Scissors'; 
         cp++;
     }
     else if(playerSelection == "paper" && computerSelection == "scissors"){
-        console.log("You lose! Scissors Beat paper");
         resultName.textContent = 'You lose! Scissors Beat paper'; 
         cp++;
     }else if(playerSelection == "scissors" && computerSelection == "paper"){
-        console.log("You Win! Scissors Beat paper");
         resultName.textContent = 'You Win! Scissors Beat paper'; 
         pp++;
     }
     else{
-        console.log("Draw");
         resultName.textContent = 'Draw';
     }
     console.log("YOU: "+ pp + " COMPUTER: " + cp);
-    resultScore.textContent = "YOU: "+ pp + " COMPUTER: " + cp;
+    resultPlayer.textContent = "Player: "+ pp ;
+    resultComputer.textContent ="Computer: " + cp;
+
+
 
     if(pp == 5){
         alert("You Win!"); //if player win 5 times, alert will pop up
