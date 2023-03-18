@@ -69,22 +69,31 @@ function playRound(playerSelection, computerSelection) {
         playerIcon.src = `img/${playerSelection}.png`;
         computerIcon.src = `img/${computerSelection}.png`;
     }
+
+    if(pp >= 5){
+        alert("You Win!"); //if player win 5 times, alert will pop up
+        resultName.textContent = 'Choose what you play';
+    playerIcon.src = `img/questionMArk.png`;
+        computerIcon.src = `img/questionMArk.png`;        pp = 0;
+        cp = 0;
+    
+        }else if(cp >= 5){
+            alert("You Lose!"); //if computer win 5 times, alert will pop 
+            resultName.textContent = 'Choose what you play';
+        playerIcon.src = `img/questionMArk.png`;
+        computerIcon.src = `img/questionMArk.png`;
+            pp = 0;
+            cp = 0;
+        }
+
+
     console.log("YOU: "+ pp + " COMPUTER: " + cp);
     resultPlayer.textContent = " "+ pp ;
     resultComputer.textContent =" " + cp;
 
 
 
-    if(pp >= 5){
-        alert("You Win!"); //if player win 5 times, alert will pop up
-        pp = 0;
-        cp = 0;
     
-        }else if(cp >= 5){
-            alert("You Lose!"); //if computer win 5 times, alert will pop up
-            pp = 0;
-            cp = 0;
-        }
    
     
   }
